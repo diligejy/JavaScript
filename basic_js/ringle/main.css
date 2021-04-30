@@ -1,0 +1,31 @@
+.proverb {
+    font-size: 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vw100 {
+    width: 100vw;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+#here.fadeIn {
+    opacity: 1;
+}
+
+#here {
+    opacity: 0;
+    transition: 1s all linear;
+}
+
+.image {
+    border-radius: 8px;
+    width: 200px;
+}

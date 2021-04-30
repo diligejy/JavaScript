@@ -7,20 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
     <title>Document</title>
-
 </head>
 
 <body>
 
     <div class="alert-box" id="alert-box">
-        Alert 박스
-        <button onclick="document.getElementById('alert-box').style.display='none'">닫기</button>
+        <p id="p-content">Alert 박스</p>
+        <button id="close">닫기</button>
     </div>
-    <button onclick="document.getElementsByClassName('alert-box')[0].style.display='block'">버튼</button>
+    <button onclick="jak('아이디입력해라', 'block')">버튼</button>
+    <button onclick="jak('비번입력해라', 'block')">버튼2</button>
 
     <script>
-
+        function jak(str, status) {
+            document.getElementById('p-content').innerHTML = str;
+            document.getElementsByClassName('alert-box')[0].style.display = status;
+        }
+        document.getElementById('close').addEventListener('click', function () {
+            document.getElementById('alert-box').style.display = 'none';
+        });
+    
+        
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
