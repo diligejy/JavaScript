@@ -14,6 +14,13 @@ const onClickNumber = (event) => {
     if (!numTwo) {
         $result.value = '';
     }
+    // -1, -2 처럼 음수를 만들기
+
+    if (!numTwo && operator === '-') {
+        numOne -= event.target.textContent;
+        $result.value -= event.target.textContent;
+    }
+
     numTwo += event.target.textContent;
     $result.value += event.target.textContent;
 };
@@ -30,11 +37,7 @@ document.querySelector('#num-8').addEventListener('click', onClickNumber);
 document.querySelector('#num-9').addEventListener('click', onClickNumber);
 
 const onClickOperator = (op) => (event) => {
-    // -1, -2 처럼 음수를 만들기
-    if (!numOne && !numTwo && !operator && (operator === '-')) {
-        $operator.value = op;
-        numOne = -1;
-    }
+
 
     if (numTwo) {
         switch (operator) {
@@ -62,7 +65,12 @@ const onClickOperator = (op) => (event) => {
         operator = op;
         $operator.value = op;
     } else {
-        alert('숫자를 먼저 입력하세요');
+        if (!numOne && !numTwo && (operator === '-')) {
+            $operator.value = op;
+            operator = op;
+        } else {
+            alert('숫자를 먼저 입력하세요');
+        }
     }
 }
 
@@ -89,6 +97,7 @@ const onClickCalculate = () => {
         operator = '';
         numTwo = '';
     } else {
+
         alert('숫자를 먼저 입력하세요');
     }
 }
