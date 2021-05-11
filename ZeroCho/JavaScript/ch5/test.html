@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="input"></p>
+    <p id="output"></p>
+    <script>
+        var test = {
+            id : 'name1',
+            score : 100,
+            color : 'red',
+
+            input : function(a) {
+                var score = this.score + a;
+                if (score >= 300){
+                    score = 90;
+                    return score;
+                }
+                else {
+                    return score;
+                }
+            },
+
+            output: function(b){
+                var score = this.score - b;
+                if (score < 0){
+                    score = 0;
+                    return score;
+                } else {
+                    return score;
+                }
+            }
+        };
+
+        var input = document.getElementById("input");
+        input.textContent = 'input:  ' + test.input(100);
+
+        var output = document.getElementById("output");
+        output.textContent = "output:  " + test.output(40);
+    </script>
+</body>
+
+</html>
