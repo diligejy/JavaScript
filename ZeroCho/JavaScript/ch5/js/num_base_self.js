@@ -66,7 +66,7 @@ $form.addEventListener('submit', (event) => {
     if (strike === 0 && ball === 0) {
         out++;
         // document.getElementById('logs').innerHTML(`${value} : ${out} <span style="color:red">아웃</span>`);
-        const elem = document.createElement('div');
+        const elem = document.createElement('p');
         elem.innerHTML = `${value} : ${out} <span style="color:red">아웃</span>`
         $logs.appendChild(elem);
     } else {
