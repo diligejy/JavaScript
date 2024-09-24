@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+<body>
+
+
+    <script>
+        const newDiv = document.createElement('div');
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'p 태그 입니다';
+        newDiv.appendChild(newParagraph);
+        document.body.appendChild(newDiv);
+
+        const newLink = document.createElement("a");
+        newLink.setAttribute("href", "http://naver.com");
+        newLink.textContent="Naver";
+        document.body.appendChild(newLink);
+
+        const newSection = document.createElement("section");
+        newSection.setAttribute("id", "my-section");
+
+        const sectionTitle = document.createElement("h2");
+        sectionTitle.textContent = "새로운 섹션";
+
+        const paragraph1 = document.createElement("p");
+        const paragraph2 = document.createElement("p");
+
+        paragraph1.textContent = "새로운 섹션의 첫 번째 문단입니다.";
+        paragraph2.textContent = "새로운 섹션의 두 번째 문단입니다.";
+
+        newSection.appendChild(sectionTitle);
+        newSection.appendChild(paragraph1);
+        newSection.appendChild(paragraph2);
+        document.body.appendChild(newSection);
+
+    </script>
+</body>
+</html>
