@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <input type="text" name="username" value="id">
+    <input type="password" name="password">
+
+
+    <script>
+        const firstBox = document.querySelector(".box");
+        console.log(firstBox.textContent);
+
+        const allBoxes = document.querySelectorAll(".box");
+        allBoxes.forEach(function(box){
+            console.log(box.textContent);
+        })
+
+        const nameInput = document.querySelector('input[name="username"]');
+        console.log(nameInput)
+    </script>
+</body>
+</html>
