@@ -34,6 +34,9 @@ const ellie = {
 changeName(ellie);
 console.log(ellie);
 
+
+
+
 // 3. Default Parameters (added in ES6)
 function showMessage(message, from = 'unknown') {
     console.log(`$(message) by $(from)`);
