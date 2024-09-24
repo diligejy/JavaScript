@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 선택 예제</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1>웹사이트에 오신 것을 환영합니다</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#home">홈</a></li>
+            <li class="nav-item"><a href="#about">소개</a></li>
+            <li class="nav-item"><a href="#contact">연락처</a></li>
+        </ul>
+    </nav>
+    <section id="content">
+        <h2>내 소개</h2>
+        <p class="intro">안녕하세요! 저는 웹 개발자입니다</p>
+        <p class="details">저는 대화형 웹 애플리케이션을 만드는 것을 좋아합니다.</p>
+    </section>
+    <footer>
+        <p>연락처: info@example.com</p>
+    </footer>
+    <script>
+        const header = document.getElementById("main-header");
+        console.log(header.innerText);
+
+        const navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach((item) => {
+            console.log(item.textContent);
+        });
+
+        const paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach((paragraph) => {
+            console.log(paragraph.textContent);
+        });
+
+        const homeLink = document.querySelector('a[href="#home"]');
+        console.log(homeLink.textContent);
+
+        const firstNavItem = document.querySelector("nav > ul > li:first-child");
+        console.log(firstNavItem.textContent);
+
+        const introParagraph = document.querySelector("#content .intro");
+        console.log(introParagraph.textContent);
+
+    </script>
+</body>
+</html>
