@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .animated {
+        animation: slideIn 1s forwards;
+    }
+</style>
+<body>
+    <div id="box"></div>
+
+    <script>
+        const box = document.getElementById("box");
+        
+        box.style.transition = "background-color 0.5s, transform 0.5s";
+        box.style.backgroundColor = "red";
+        box.style.transform = "scale(1.5)";
+
+        box.classList.add("animated");
+
+    </script>
+</body>
+</html>
