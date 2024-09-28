@@ -7,3 +7,5 @@
 4. [4강. JavaScript 요소 선택하기 - document.querySelector와 querySelectorAll 2](https://youtu.be/3kclyifYcgc)
 
 5. [5강. JavaScript 요소 조작하기 1 - document.createElement와 appendChild](https://youtu.be/KdMZa07oARQ)
+
+6. [6강. JavaScript 요소 조작하기 1 - insertBefore 및 요소 복제](https://youtu.be/3_6zjW1S9WI)

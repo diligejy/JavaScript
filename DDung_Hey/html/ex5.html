@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="pTag" class="pTag">기존 문단</p>
+
+    <script>
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = "이 문단은 다른 문단 앞에 삽입될 것입니다";
+
+        const oldParagraph = document.querySelector("p");
+        
+        oldParagraph.parentNode.insertBefore(newParagraph, oldParagraph);
+
+        const clonedElement = oldParagraph.cloneNode(true);
+
+        document.body.appendChild(clonedElement);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+
+        const container = document.getElementById("container");
+
+        const newElement = document.createElement("div");
+        newElement.textContent = "새로운 요소입니다.";
+        newElement.classList.add("new-element");
+        newElement.setAttribute("id", "new-element");
+        document.body.appendChild(newElement);
+
+        const containerElement = document.createElement("p");
+        containerElement.textContent = "새로운 요소가 container에 추가되었습니다.";
+        container.appendChild(containerElement);
+
+        const insertedElement = document.createElement("p");
+        insertedElement.textContent = "새로운 요소가 기존 요소 앞에 삽입되었습니다.";
+        container.insertBefore(insertedElement, container.firstChild);
+
+        const existingElement = container.firstElementChild;
+        const clonedElement = existingElement.cloneNode(true);
+        clonedElement.textContent = "복제된 요소입니다.";
+
+        container.appendChild(clonedElement);
+
+
+    </script>
+
+</body>
+</html>
