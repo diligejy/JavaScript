@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>첫 번째 p 요소</p>
+
+    <div class="remove-me">제거할 요소 1</div>
+    <div class="remove-me">제거할 요소 2</div>
+    <div class="specific">특정 div 요소</div>
+    <div class="class-manipulation">클래스 조작 대상 div 요소</div>
+    <p class="styled">스타일 변경 대상 p 요소</p>
+
+    <script>
+        
+        // 1. 첫 번째 p 태그 제거
+        const firstParagraph = document.querySelector("p");
+        if(firstParagraph){
+            firstParagraph.parentNode.removeChild(firstParagraph);
+        }
+        
+        // 2. 클래스 이름이 remove-me인 모든 요소 제거
+
+        const elementsToRemove = document.querySelectorAll(".remove-me");
+        elementsToRemove.forEach((element) => {
+            element.parentNode.removeChild(element);
+        })
+
+        // 3. 특정 div 요소의 속성 설정 및 제거 
+        const specificDiv = document.querySelector("div.specific");
+        if (specificDiv){
+            specificDiv.setAttribute("data-info", "some data");
+            const dataInfo = specificDiv.getAttribute("data-info");
+            console.log(dataInfo);
+            specificDiv.removeAttribute("data-info");
+        }
+
+        // 4. 특정 div 요소의 클래스 조작
+        const classDiv = document.querySelector("div.class-manipulation");
+        if (classDiv){
+            classDiv.classList.add("new-class");
+            classDiv.classList.remove("old-class");
+            classDiv.classList.toggle("active");
+            const hasClass = classDiv.classList.contains("new-class");
+            console.log(hasClass);
+        }
+
+        // 5. 특정 p 요소의 스타일 동적 변경
+        const styledParagraph = document.querySelector("p.styled");
+        if (styledParagraph){
+            styledParagraph.style.color = "red";
+            styledParagraph.style.fontSize = "18px";
+            styledParagraph.style.padding = "15px";
+        }
+
+    </script>   
+</body>
+</html>

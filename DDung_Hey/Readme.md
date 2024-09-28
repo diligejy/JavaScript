@@ -9,3 +9,5 @@
 5. [5강. JavaScript 요소 조작하기 1 - document.createElement와 appendChild](https://youtu.be/KdMZa07oARQ)
 
 6. [6강. JavaScript 요소 조작하기 1 - insertBefore 및 요소 복제](https://youtu.be/3_6zjW1S9WI)
+
+7. [7강. JavaScript 요소 조작하기 2 - removeChild 및 조작 기법](https://youtu.be/qg_LcxvTnH0)
