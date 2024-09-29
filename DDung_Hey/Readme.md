@@ -13,3 +13,5 @@
 7. [7강. JavaScript 요소 조작하기 2 - removeChild 및 조작 기법](https://youtu.be/qg_LcxvTnH0)
 
 8. [8강. JavaScript 스타일 조작하기 1 - element.style을 통한 변경](https://youtu.be/U7wcr4f-9YY)
+
+9. [9강. JavaScript 스타일 조작하기 1 - Media Queries와 반응형 디자인](https://youtu.be/OtKmw1T01z0)

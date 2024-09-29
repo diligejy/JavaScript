@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myElement {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color: blue;
+    }
+</style>
+<body>
+    <div id="myElement">
+        Hello, World!
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('myElement').css('background-color', 'green');
+        });
+
+        $('#myElement').css({
+            'color' : 'white',
+            'font-size': '25px',
+            'padding': '10px'
+        });
+    </script>
+</body>
+</html>
