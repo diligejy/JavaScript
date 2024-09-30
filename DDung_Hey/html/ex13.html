@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text", id="inputField" placeholder="텍스트를 입력하세요">
+    <p id="feedback"></p>
+
+    <script>
+        // 요소 선택
+        const inputField = document.getElementById("inputField");
+        const feedback = document.getElementById("feedback");
+
+        // 입력 필드 이벤트 리스너 추가
+        inputField.addEventListener("input", function() {
+            // 입력 값 유효성 검사
+            if (inputField.value.length > 5){
+                inputField.classList.add("valid");
+                inputField.classList.remove("invalid");
+                feedback.textContent = "입력이 유효합니다";
+            } else {
+                inputField.classList.add("invalid");
+                inputField.classList.remove("valid");
+                feedback.textContent = "입력이 유효하지 않습니다.";
+            }
+        });
+    </script>
+</body>
+</html>

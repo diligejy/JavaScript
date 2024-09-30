@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="myParagraph">이것은 문단입니다</p>
+    <button id="toggleButton">하이라이트 버튼</button>
+    <script>
+        const myParagraph = document.getElementById('myParagraph');
+        const toggleButton = document.getElementById('toggleButton');
+        
+        // 버튼 클릭 이벤트 리스너 추가
+        toggleButton.addEventListener("click", function(){
+            // 클래스 토글
+            myParagraph.classList.toggle("highlight");
+        });
+
+    </script>
+</body>
+</html>

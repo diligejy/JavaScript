@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <h1>테마 전환기</h1>
+    <button id="themeButton">테마 전환</button>
+    <script>
+        // 요소 선택
+        const body = document.body;
+        const themeButton = document.getElementById("themeButton");
+
+        // 버튼 클릭 이벤트 리스너 추가
+        themeButton.addEventListener('click', function() {
+            // 테마 클래스 토글
+            body.classList.toggle("light-mode");
+            body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>

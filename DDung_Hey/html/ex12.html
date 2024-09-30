@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="responsiveParagraph">문단입니다.</p>
+
+    <script>
+        // 요소 선택
+        const responsiveParagraph = document.getElementById('responsiveParagraph');
+        
+        // 미디어 쿼리 객체 생성
+        const mediaQuery = window.matchMedia("(max-width: 350px)");
+
+        // 미디어 쿼리 이벤트 핸들러 
+        function handleMediaQuery(event) {
+            if (event.matches){
+                // 화면 너비가 350px 이하일 때 스타일 적용
+                responsiveParagraph.classList.add("mobile");
+                responsiveParagraph.classList.remove("desktop");
+            } else {
+                // 화면 너비가 350px 초과일 때 스타일 적용
+                responsiveParagraph.classList.add("desktop");
+                responsiveParagraph.classList.remove("mobile"); 
+            }
+        }
+
+        // 미디어 쿼리 이벤트 리스너 등록
+        mediaQuery.addListener(handleMediaQuery);
+
+        // 초기 미디어 쿼리 체크
+        handleMediaQuery(mediaQuery);
+    </script>
+</body>
+</html>
