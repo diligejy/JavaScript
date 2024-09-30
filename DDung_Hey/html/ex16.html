@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box { 
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const box = document.getElementById("box");
+        
+/*        box.addEventListener("click", () => {
+            console.log("mouse click");
+        });*/
+        box.addEventListener("mouseover", () => {
+            console.log("mouse over");
+        });
+        box.addEventListener("mouseout", () => {
+            console.log("mouse out");
+        });
+       /* box.addEventListener("mousemove", () => {
+            console.log("mouse move");
+        });*/
+        // 마우스 클릭 한 시점
+        box.addEventListener("mousedown", () => {
+            console.log("mouse down");
+        });
+        // 마우스 클릭 후 뗀 시점 
+        box.addEventListener("mouseup", () => {
+            console.log("mouse up");
+        });
+        // 더블 클릭
+        box.addEventListener("dblclick", () => {
+            console.log("mouse dblclick");
+        });
+    </script>
+</body>
+</html>

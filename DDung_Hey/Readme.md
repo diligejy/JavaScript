@@ -19,3 +19,7 @@
 10. [10강. JavaScript 스타일 조작하기 2 - 클래스 기반 스타일 변경](https://youtu.be/D6PnAreuQnk)
 
 11. [11강. JavaScript 이벤트 리스너 - addEventListener와 마우스 이벤트](https://youtu.be/82e3_-Xohzg)
+
+12. [12강. JavaScript 이벤트 리스너 - 키보드 및 폼 이벤트](https://youtu.be/k1jlvyVeteM)
+
+13. [13강. JavaScript 이벤트 리스너 - 윈도우 이벤트와 리스너 제어](https://youtu.be/lTy-lfb5fEA)

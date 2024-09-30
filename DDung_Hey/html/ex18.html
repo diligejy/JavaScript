@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text", name="", id="">
+        <input type="submit" value="제출">
+        <input type="checkbox" name="" id="">
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log('form submit 이벤트 발생');
+        });
+        form.addEventListener('change', function (event) {
+            event.preventDefault();
+            console.log('form change 이벤트 발생');
+        });
+        form.addEventListener('input', function (event) {
+            event.preventDefault();
+            console.log('form input 이벤트 발생');
+        });
+        
+        const input = document.querySelector("input");
+        input.addEventListener('focus', function(event) {  
+            console.log('focus 이벤트 발생');
+        });
+        input.addEventListener('blur', function(event) {  
+            console.log('blur 이벤트 발생');
+        });
+
+
+    </script>
+</body>
+</html>
