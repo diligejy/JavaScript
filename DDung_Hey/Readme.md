@@ -29,3 +29,5 @@
 15. [15강. JavaScript 이벤트 전파 - 이벤트 위임과 전파 제어](https://youtu.be/estw3LZR7OA)
 
 16. [16강. JavaScript 기본 이벤트 동작 제어 - preventDefault와 드래그 앤 드롭](https://youtu.be/UNYrQupU_DU)
+
+17. [17강. JavaScript 기본 이벤트 동작 제어 - 커스텀 컨텍스트 메뉴](https://youtu.be/HcAeKChsPZo)
