@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        바깥 div
+        <div id="inner">안쪽 div</div>
+    </div>
+    <script>
+        const outerDiv = document.getElementById('outer');
+        const innerDiv = document.getElementById('inner');
+
+/*        innerDiv.addEventListener('click', () => {
+            console.log("안쪽 div가 클릭 되었습니다 (버블링 단계)");
+        });
+        outerDiv.addEventListener('click', () => {
+            console.log("바깥쪽 div가 클릭 되었습니다 (버블링 단계)");
+        });
+        
+        innerDiv.addEventListener('click', () => {
+            console.log("안쪽 div가 클릭 되었습니다 (캡처링 단계)")
+        }, true);
+        outerDiv.addEventListener('click', () => {
+            console.log("바깥쪽 div가 클릭 되었습니다 (캡처링 단계)");
+        }, true);*/
+        innerDiv.addEventListener('click', (event) => {
+            console.log("안쪽 div가 클릭 되었습니다");
+            event.stopPropagation(); // 이벤트 전파 중지
+        });
+        outerDiv.addEventListener('click', () => {
+            console.log("바깥쪽 div가 클릭 되었습니다");
+        });
+        
+    </script>
+</body>
+</html>

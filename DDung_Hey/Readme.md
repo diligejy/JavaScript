@@ -23,3 +23,7 @@
 12. [12강. JavaScript 이벤트 리스너 - 키보드 및 폼 이벤트](https://youtu.be/k1jlvyVeteM)
 
 13. [13강. JavaScript 이벤트 리스너 - 윈도우 이벤트와 리스너 제어](https://youtu.be/lTy-lfb5fEA)
+
+14. [14강. JavaScript 이벤트 리스너 - 이벤트 전파 및 기본 동작 방지](https://youtu.be/tGoQY7Efkfs)
+
+15. [15강. JavaScript 이벤트 전파 - 이벤트 위임과 전파 제어](https://youtu.be/estw3LZR7OA)
