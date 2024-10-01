@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contextMenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #contextMenu li {
+            padding: 8px 12px;
+            list-style: none;
+            cursor: pointer;
+        }
+        
+        #contextMenu li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="target">click me</div>
+    <ul id="contextMenu">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+    </ul>
+
+    <script>
+        
+        const target = document.getElementById('target');
+        const contextMenu = document.getElementById('contextMenu');
+
+        const showContextMenu = (e) => {
+            e.preventDefault();
+
+            contextMenu.style.left = e.pageX + "px"
+            contextMenu.style.top = e.pageY + "px"
+            contextMenu.style.display = "block";
+        };
+
+        const hideContextMenu = () => {
+            contextMenu.style.display = "none";
+        };
+
+        target.addEventListener('contextmenu', showContextMenu);
+
+        document.addEventListener('click', hideContextMenu);
+
+    </script>
+</body>
+</html>
