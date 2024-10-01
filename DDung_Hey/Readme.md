@@ -31,3 +31,7 @@
 16. [16강. JavaScript 기본 이벤트 동작 제어 - preventDefault와 드래그 앤 드롭](https://youtu.be/UNYrQupU_DU)
 
 17. [17강. JavaScript 기본 이벤트 동작 제어 - 커스텀 컨텍스트 메뉴](https://youtu.be/HcAeKChsPZo)
+
+18. [18강. JavaScript AJAX 통신 - fetch API 개념과 예제](https://youtu.be/vimxIAlHZwA)
+
+19. [19강. JavaScript AJAX 통신 - 통신 실습 1](https://youtu.be/AtSB6sWXg2I)

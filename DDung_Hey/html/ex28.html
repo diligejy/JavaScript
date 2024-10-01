@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AJAX GET 실습</h1>
+    <button onclick="fetchDataWithAjax()">GET 요청 보내기</button>
+    <div id="ajaxGetResult"></div>
+
+    <script>
+        const fetchDataWithAjax = () => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+            xhr.onreadystatechange = function (){
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let response = JSON.parse(xhr.responseText);
+                    let output = ""
+                    response.forEach(function(post) {
+                        output += `<h3>${post.title}</h3><p>${post.body}</p>`
+                    });
+                    document.getElementById('ajaxGetResult').innerHTML = output;
+                };
+            };
+            xhr.send();
+        };
+    </script>
+</body>
+</html>
