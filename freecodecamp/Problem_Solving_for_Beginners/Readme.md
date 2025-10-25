@@ -1,0 +1,1 @@
+1. [Problem Solving for Beginners: Build Algorithms from Scratch with First Principles and JavaScript](https://youtu.be/xJjxQjZTryI)
